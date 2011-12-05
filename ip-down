@@ -2,11 +2,11 @@
 export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
 
 if [ ! -e /tmp/pptp_oldgw ]; then
-        exit 0
+    exit 0
 fi
 
 if [ ! -e /tmp/pptp_vpngw ]; then
-        exit 0
+    exit 0
 fi
 
 OLDGW=`cat /tmp/pptp_oldgw`
@@ -1301,6 +1301,6 @@ route delete -net 69.163.128.0/17 "${VPNGW}"
 #customend
 
 
-rm /tmp/pptp_oldgw
-rm /tmp/pptp_vpngw
+rm -f /tmp/pptp_oldgw
+rm -f /tmp/pptp_vpngw
 dscacheutil -flushcache
