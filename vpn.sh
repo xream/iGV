@@ -1,5 +1,6 @@
 #!/bin/bash
 sleep 18
+mkdir -p ~/tmp/
 echo "started at `date`" > ~/tmp/vpn.log
 #set the VPN service name
 VPN="ivpn"
