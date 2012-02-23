@@ -3,16 +3,11 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local
 #get gw
 	oldgw=`cat /tmp/vpn_oldgw`
 	vpngw=`cat /tmp/vpn_vpngw`
-source /usr/local/etc/vpndown.sh
-source /usr/local/etc/ipdownadd.sh
-#change default gw
-	route delete 0/1 $vpngw
-	route delete 128.0/1 $vpngw
-	route delete default $vpngw
-	route delete default $oldgw
-	route add default $oldgw	
+source /usr/local/etc/dnsmasq/vpndown.sh
+source /usr/local/etc/dnsmasq/ipdownadd.sh
 #rm log
 	rm -f /tmp/vpn_oldgw
 	rm -f /tmp/vpn_vpngw
 #clean dns cache
 	dscacheutil -flushcache
+	sudo killall -9 dnsmasq

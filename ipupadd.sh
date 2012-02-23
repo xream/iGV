@@ -1,5 +1,6 @@
 #!/bin/bash
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/sbin
+vpngw=10.1.2.1
 #fc2
 route add 199.116.176.0/22 $vpngw
 route add 208.71.104.0/22 $vpngw

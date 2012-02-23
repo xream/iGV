@@ -18,6 +18,8 @@ route add 174.133.3.65 $vpngw
 route add 74.55.49.45 $vpngw
 # www.bbc.co.uk
 route add 212.58.246.0/24 $vpngw
+# api.bitly.com http://goo.gl/jZfTh
+route add 69.58.188.0/24 $vpngw
 # news.boxun.com
 route add 204.93.214.0/24 $vpngw
 # news.chinatimes.com
@@ -32,6 +34,8 @@ route add 75.101.159.0/24 $vpngw
 route add 75.101.140.0/24 $vpngw
 # wiki.dropbox.com
 route add 174.36.51.41 $vpngw
+# www.feedly.com http://goo.gl/jZfTh
+route add 216.218.207.0/24 $vpngw
 # login.facebook.com
 #route add 66.220.147.0/24 $vpngw
 #route add 66.220.146.0/24 $vpngw
@@ -39,6 +43,8 @@ route add 174.36.51.41 $vpngw
 route add 203.98.159.216 $vpngw
 # t0.fotop.net
 route add 58.64.131.76 $vpngw
+# is.gd http://goo.gl/jZfTh
+route add 89.200.143.0/24 $vpngw
 # for Google
 route add 72.14.192.0/18 $vpngw
 route add 74.125.0.0/16 $vpngw
@@ -51,6 +57,8 @@ route add 72.14.203.132 $vpngw
 route add 78.16.49.15 $vpngw
 # googlevideo.com
 route add 159.106.121.0/24 $vpngw
+# appspot.l.google.com
+route add 72.14.203.0/24 $vpngw
 # for all facebook
 route add 66.220.0.0/16 $vpngw
 route add 69.63.0.0/16 $vpngw
@@ -91,6 +99,8 @@ route add 210.17.38.0/24 $vpngw
 route add 174.120.238.130 $vpngw
 # tw.nextmedia.com
 route add 210.242.234.140 $vpngw
+# s.nexttv.com.tw
+route add 203.69.138.0/24 $vpngw
 # {www|api}.twitter.com
 route add 168.143.161.0/24 $vpngw
 route add 168.143.162.0/24 $vpngw
@@ -98,8 +108,12 @@ route add 168.143.171.0/24 $vpngw
 route add 128.242.240.0/24 $vpngw
 route add 128.242.245.0/24 $vpngw
 route add 128.242.250.0/24 $vpngw
+route add 199.59.148.0/24 $vpngw
+route add 199.59.149.0/24 $vpngw
 # t.co
 route add 199.59.148.0/24 $vpngw
+# m.wikipedia.org
+route add 208.80.154.0/24 $vpngw
 # blogs.yahoo.co.jp
 route add 124.83.175.0/24 $vpngw
 route add 114.111.75.0/24 $vpngw
@@ -116,6 +130,8 @@ route add 180.233.112.0/24 $vpngw
 route add 203.84.203.0/24 $vpngw
 # tw.blog.yahoo
 route add 203.84.202.0/24 $vpngw
+# tw.myblog.yahoo.com
+route add 119.160.242.0/24 $vpngw
 # for all TW Yahoo
 route add 116.214.0.0/16 $vpngw
 # us.lrd.yahoo.com
@@ -138,12 +154,7 @@ route add 209.85.147.0/24 $vpngw
 route add 210.243.0.0/16 $vpngw
 # for vimeo
 # av.vimeo.com
-#route add 117.104.138.0/24 $vpngw
-#route add 24.143.203.0/24 $vpngw
-#route add 198.173.160.0/24 $vpngw
-#route add 198.173.161.0/24 $vpngw
-#route add 140.174.24.0/24 $vpngw
-#route add 140.174.25.0/24 $vpngw
+route add 64.211.21.0/24 $vpngw
 route add 64.145.89.0/24 $vpngw
 # player.vimeo.com
 route add 74.113.233.133 $vpngw
@@ -167,6 +178,8 @@ route add 64.233.160.0/19 $vpngw
 route add 74.113.233.127 $vpngw
 # embed.wretch.cc
 route add 203.188.204.0/24 $vpngw
+# f5.wretch.yimg.com
+route add 119.160.252.0/24 $vpngw
 # pic.wretch.cc
 route add 116.214.13.248 $vpngw
 route add 119.160.252.14 $vpngw

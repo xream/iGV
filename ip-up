@@ -1,6 +1,7 @@
 #!/bin/bash
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/sbin
 #clean dns cache
+	sudo killall -9 dnsmasq
 	dscacheutil -flushcache
 #get gateway
 	vpngw=`ifconfig |egrep -A1 "tun|tap|ppp"|tail -1|awk '{print $4}'`
@@ -12,11 +13,5 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local
 #log
 	echo $oldgw > /tmp/vpn_oldgw
 	echo $vpngw > /tmp/vpn_vpngw
-source /usr/local/etc/vpnup.sh
-source /usr/local/etc/ipupadd.sh
-#change default gw
-	route delete 0/1 $vpngw
-	route delete 128.0/1 $vpngw
-	route delete default $vpngw
-	route delete default $oldgw
-	route add default $oldgw
+source /usr/local/etc/dnsmasq/vpnup.sh
+source /usr/local/etc/dnsmasq/ipupadd.sh
