@@ -26,7 +26,7 @@ Copy everything ( NOT the folder itself, every file in the folder ) to `/usr/loc
 
 Clear your own hosts file `/etc/hosts`.
 
-Edit `/usr/local/etc/resolv.conf`.
+Edit `/usr/local/etc/dnsmasq/resolv.conf`.
 
 Change `nameserver` to your ISP's DNS nameservers or you can use the [114DNS](https://www.114dns.com/).
 
