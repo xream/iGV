@@ -1,17 +1,48 @@
-#!/bin/bash
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/sbin
-#clean dns cache
-	sudo killall -9 dnsmasq
-	dscacheutil -flushcache
-#get gateway
-	vpngw=`ifconfig |egrep -A1 "tun|tap|ppp"|tail -1|awk '{print $4}'`
-	oldgw=`netstat -nr|egrep "default.*en"|awk '{print $2}'`
-	#set the gateway below
-	#DO NOT uncomment them if nothing goes wrong!!!
-	#oldgw=192.168.2.1
-	#vpngw=192.168.0.1
-#log
-	echo $oldgw > /tmp/vpn_oldgw
-	echo $vpngw > /tmp/vpn_vpngw
-source /usr/local/etc/dnsmasq/vpnup.sh
-source /usr/local/etc/dnsmasq/ipupadd.sh
+#!/bin/sh
+export PATH="/bin:/sbin:/usr/sbin:/usr/bin"
+vpngw=`ifconfig |egrep -A1 "tun|tap|ppp"|tail -1|awk '{print $4}'`
+route add 23.0.0.0/8 $vpngw
+route add 24.0.0.0/8 $vpngw
+route add 50.0.0.0/8 $vpngw
+route add 63.0.0.0/8 $vpngw
+route add 64.0.0.0/8 $vpngw
+route add 65.0.0.0/8 $vpngw
+route add 66.0.0.0/8 $vpngw
+route add 67.0.0.0/8 $vpngw
+route add 68.0.0.0/8 $vpngw
+route add 69.0.0.0/8 $vpngw
+route add 70.0.0.0/8 $vpngw
+route add 71.0.0.0/8 $vpngw
+route add 72.0.0.0/8 $vpngw
+route add 73.0.0.0/8 $vpngw
+route add 74.0.0.0/8 $vpngw
+route add 75.0.0.0/8 $vpngw
+route add 76.0.0.0/8 $vpngw
+route add 96.0.0.0/8 $vpngw
+route add 97.0.0.0/8 $vpngw
+route add 98.0.0.0/8 $vpngw
+route add 99.0.0.0/8 $vpngw
+route add 100.0.0.0/8 $vpngw
+route add 104.0.0.0/8 $vpngw
+route add 107.0.0.0/8 $vpngw
+route add 108.0.0.0/8 $vpngw
+route add 135.0.0.0/8 $vpngw
+route add 136.0.0.0/8 $vpngw
+route add 142.0.0.0/8 $vpngw
+route add 147.0.0.0/8 $vpngw
+route add 162.0.0.0/8 $vpngw
+route add 166.0.0.0/8 $vpngw
+route add 172.0.0.0/8 $vpngw
+route add 173.0.0.0/8 $vpngw
+route add 174.0.0.0/8 $vpngw
+route add 184.0.0.0/8 $vpngw
+route add 192.0.0.0/8 $vpngw
+route add 198.0.0.0/8 $vpngw
+route add 199.0.0.0/8 $vpngw
+route add 204.0.0.0/8 $vpngw
+route add 205.0.0.0/8 $vpngw
+route add 206.0.0.0/8 $vpngw
+route add 207.0.0.0/8 $vpngw
+route add 208.0.0.0/8 $vpngw
+route add 209.0.0.0/8 $vpngw
+route add 216.0.0.0/8 $vpngw
